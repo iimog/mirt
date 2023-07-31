@@ -70,15 +70,15 @@ end
 % e.g., 7.3 and running on earlier 7.0 won't work.
 % If you have mex problems, comment out the following line.
 % Much of the toolbox will work without mex, just slower.
-addpath([irtdir 'mex/v7']);
+%addpath([irtdir 'mex/v7']);
 
 
 % do not add the paths below if you are using Matlab!
-if ir_is_octave
-	addpath([irtdir 'octave']); % extra stuff for octave only!
-elseif isempty(which('dbstack')) % for freemat only!
-	addpath([irtdir 'freemat']); % extra stuff for freemat only!
-end
+%if ir_is_octave
+%	addpath([irtdir 'octave']); % extra stuff for octave only!
+%elseif isempty(which('dbstack')) % for freemat only!
+%	addpath([irtdir 'freemat']); % extra stuff for freemat only!
+%end
 
 % check to see if path setup worked by looking for im() routine.
 if strcmp([irtdir 'graph' filesep 'im.m'], which('im'))
